@@ -1,59 +1,81 @@
-# AI Image Generator
+# AI Image Generator 📸✨
 
-AI Image Generator, kullanıcıların yapay zeka destekli modellerle metin açıklamalarına (prompts) dayalı olarak görüntüler oluşturmasına olanak tanıyan bir React Native uygulamasıdır. Kullanıcılar oluşturulan görüntüleri cihazlarına indirebilir veya paylaşabilir.
+Bu proje, kullanıcının verdiği açıklamaya (prompt) göre yapay zeka destekli görseller oluşturan bir **React Native** uygulamasıdır.  
+Projede Hugging Face API'leri kullanılarak farklı modellerden görseller üretilmektedir.
 
-## 🚀 Özellikler
+## Özellikler
 
-- **Metin Açıklaması (Prompt) ile Görüntü Oluşturma**: Kullanıcılar, metin açıklamaları girerek yapay zeka tarafından görüntüler oluşturabilir.
-- **Model ve Görüntü Oranı Seçimi**: Kullanıcılar, farklı yapay zeka modelleri ve görüntü oranları arasından seçim yapabilir.
-- **Görüntü İndirme ve Paylaşma**: Oluşturulan görüntüler cihazınıza indirilebilir veya paylaşılabilir.
-- **Rastgele Prompt Önerileri**: Kullanıcılar, rastgele öneriler alarak hızlı bir şekilde görüntü oluşturabilir.
+- 📜 Prompt (açıklama) girerek görsel oluşturma
+- 🎲 Rastgele prompt önerisi
+- 🧠 Farklı AI modelleri arasından seçim yapabilme
+- 📐 Görsel boyutu için farklı en-boy oranları seçebilme
+- 💾 Görselleri indirme ve paylaşma
+- 🔥 Yükleme sırasında `ActivityIndicator` ile yüklenme animasyonu
 
-## 📦 Kurulum
+## Kullanılan Teknolojiler
 
-1. **Bağımlılıkları Yükleyin**
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [expo-router](https://expo.dev/router)
+- [Hugging Face Inference API](https://huggingface.co/inference-api)
+- [react-native-element-dropdown](https://www.npmjs.com/package/react-native-element-dropdown)
+- [expo-sharing](https://docs.expo.dev/versions/latest/sdk/sharing/)
+- [expo-media-library](https://docs.expo.dev/versions/latest/sdk/media-library/)
+- [expo-file-system](https://docs.expo.dev/versions/latest/sdk/filesystem/)
+- [moment.js](https://momentjs.com/)
+- [FontAwesome5 Icons](https://fontawesome.com/)
 
-   ```bash
-   npm install
-   ```
+## Kurulum 🚀
 
-2. **Uygulamayı Başlatın**
+1. Depoyu klonlayın:
 
-   ```bash
-   npx expo start
-   ```
+    ```bash
+    git clone https://github.com/kullaniciadi/ai-image-generator.git
+    cd ai-image-generator
+    ```
 
-   Çıktıda aşağıdaki seçenekleri göreceksiniz:
+2. Bağımlılıkları yükleyin:
 
-   - [Development Build](https://docs.expo.dev/develop/development-builds/introduction/)
-   - [Android Emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-   - [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/)
-   - [Expo Go](https://expo.dev/go): Expo Go, uygulamanızı sınırlı bir ortamda test etmenizi sağlar.
+    ```bash
+    npm install
+    # veya
+    yarn install
+    ```
 
-3. **Projeyi Düzenlemeye Başlayın**
+3. `.env` dosyası oluşturun ve Hugging Face API anahtarınızı ekleyin:
 
-   **app** dizini içindeki dosyaları düzenleyerek geliştirmeye başlayabilirsiniz. Bu proje [file-based routing](https://docs.expo.dev/router/introduction/) kullanır.
+    ```env
+    EXPO_PUBLIC_API_KEY=YOUR_HUGGINGFACE_API_KEY
+    ```
 
-## 🛠️ Projeyi Sıfırlayın
+4. Projeyi çalıştırın:
 
-Yeni bir proje başlatmak istediğinizde şu komutu çalıştırabilirsiniz:
+    ```bash
+    npx expo start
+    ```
+
+## Kullanım 📱
+
+- Prompt yazın ya da 🎲 butonuna basarak rastgele bir prompt oluşturun.
+- Model seçin.
+- Aspect Ratio (Görsel oranı) seçin.
+- `Generate` butonuna basarak görseli oluşturun.
+- Oluşturulan görseli ister **indir**, ister **paylaş**!
+
+## Görseller
+
+| Prompt Girişi ve Model Seçimi | Görsel Üretimi ve İndirme |
+| :---------------------------: | :-----------------------: |
+| ![Prompt Girişi](assets/screens/prompt-screen.png) | ![Görsel Üretimi](assets/screens/image-screen.png) |
+
+## Dizin Yapısı
 
 ```bash
-npm run reset-project
-```
-
-Bu komut, başlangıç kodlarını **app-example** dizinine taşır ve boş bir **app** dizini oluşturur.
-
-## 📚 Daha Fazla Bilgi Edinin
-
-Expo ile proje geliştirme hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara göz atabilirsiniz:
-
-- [Expo documentation](https://docs.expo.dev/): Temel bilgileri öğrenin veya gelişmiş konulara göz atın.
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Android, iOS ve web üzerinde çalışan bir proje oluşturmayı öğrenmek için adım adım bir eğitim.
-
-## 🤝 Topluluğa Katılın
-
-Evrensel uygulamalar geliştiren geliştiriciler topluluğumuza katılın:
-
-- [Expo on GitHub](https://github.com/expo/expo): Açık kaynak platformumuzu görüntüleyin ve katkıda bulunun.
-- [Discord community](https://chat.expo.dev): Expo kullanıcılarıyla sohbet edin ve sorular sorun.
+src/
+ ├── utils/
+ │    ├── Colors.ts
+ │    └── helper.ts
+ ├── components/
+ │    └── (Varsa componentlar buraya)
+ └── screens/
+      └── Index.tsx
