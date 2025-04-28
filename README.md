@@ -68,14 +68,3 @@ Projede Hugging Face API'leri kullanılarak farklı modellerden görseller üret
 | :---------------------------: | :-----------------------: |
 | ![Prompt Girişi](assets/screens/prompt-screen.png) | ![Görsel Üretimi](assets/screens/image-screen.png) |
 
-## Dizin Yapısı
-
-```bash
-src/
- ├── utils/
- │    ├── Colors.ts
- │    └── helper.ts
- ├── components/
- │    └── (Varsa componentlar buraya)
- └── screens/
-      └── Index.tsx
