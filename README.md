@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+# AI Image Generator
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+AI Image Generator, kullanıcıların yapay zeka destekli modellerle metin açıklamalarına (prompts) dayalı olarak görüntüler oluşturmasına olanak tanıyan bir React Native uygulamasıdır. Kullanıcılar oluşturulan görüntüleri cihazlarına indirebilir veya paylaşabilir.
 
-## Get started
+## 🚀 Özellikler
 
-1. Install dependencies
+- **Metin Açıklaması (Prompt) ile Görüntü Oluşturma**: Kullanıcılar, metin açıklamaları girerek yapay zeka tarafından görüntüler oluşturabilir.
+- **Model ve Görüntü Oranı Seçimi**: Kullanıcılar, farklı yapay zeka modelleri ve görüntü oranları arasından seçim yapabilir.
+- **Görüntü İndirme ve Paylaşma**: Oluşturulan görüntüler cihazınıza indirilebilir veya paylaşılabilir.
+- **Rastgele Prompt Önerileri**: Kullanıcılar, rastgele öneriler alarak hızlı bir şekilde görüntü oluşturabilir.
+
+## 📦 Kurulum
+
+1. **Bağımlılıkları Yükleyin**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. **Uygulamayı Başlatın**
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+   Çıktıda aşağıdaki seçenekleri göreceksiniz:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   - [Development Build](https://docs.expo.dev/develop/development-builds/introduction/)
+   - [Android Emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+   - [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/)
+   - [Expo Go](https://expo.dev/go): Expo Go, uygulamanızı sınırlı bir ortamda test etmenizi sağlar.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+3. **Projeyi Düzenlemeye Başlayın**
 
-## Get a fresh project
+   **app** dizini içindeki dosyaları düzenleyerek geliştirmeye başlayabilirsiniz. Bu proje [file-based routing](https://docs.expo.dev/router/introduction/) kullanır.
 
-When you're ready, run:
+## 🛠️ Projeyi Sıfırlayın
+
+Yeni bir proje başlatmak istediğinizde şu komutu çalıştırabilirsiniz:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Bu komut, başlangıç kodlarını **app-example** dizinine taşır ve boş bir **app** dizini oluşturur.
 
-## Learn more
+## 📚 Daha Fazla Bilgi Edinin
 
-To learn more about developing your project with Expo, look at the following resources:
+Expo ile proje geliştirme hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara göz atabilirsiniz:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- [Expo documentation](https://docs.expo.dev/): Temel bilgileri öğrenin veya gelişmiş konulara göz atın.
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Android, iOS ve web üzerinde çalışan bir proje oluşturmayı öğrenmek için adım adım bir eğitim.
 
-## Join the community
+## 🤝 Topluluğa Katılın
 
-Join our community of developers creating universal apps.
+Evrensel uygulamalar geliştiren geliştiriciler topluluğumuza katılın:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo on GitHub](https://github.com/expo/expo): Açık kaynak platformumuzu görüntüleyin ve katkıda bulunun.
+- [Discord community](https://chat.expo.dev): Expo kullanıcılarıyla sohbet edin ve sorular sorun.
